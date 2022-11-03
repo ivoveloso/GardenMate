@@ -20,6 +20,14 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    mobile: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      unique: true,
+      validate: {
+        len: 10,
+      },
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,

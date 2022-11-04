@@ -1,24 +1,162 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+h1,
+h4 {
+  text-align: center;
+  font-family: kanit, Helvetica, sans-serif, sans-serif;
+  font-weight: 600;
+
+  color: #2e7d32;
+
 }
 
-.no-button {
-  background: none;
+header {
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 5 0px;
+}
+
+#garden {
+  color: black;
+  font-weight: 600;
+  font-style: italic;
+}
+
+#mate {
+  font-weight: 200;
+  color: #2e7d32;
+  font-kerning: normal;
+
+}
+
+.card-header {
+  color: white;
+  font-size: larger;
+}
+
+ul {
+  list-style: none;
+  padding-left: 5px;
+  font-weight: 400px;
+
+}
+
+.card {
+  margin: 20px;
+
+}
+
+.bg-primary,
+.bg-success,
+.bg-warning {
+  text-align: center;
+}
+
+h5 {
+  text-align: left;
+  font-family: kanit, Helvetica, sans-serif, sans-serif;
+  font-weight: 500;
+  color: rgb(6, 120, 42);
+
+}
+
+h4 {
+  color: white
+}
+
+h3 {
+  color: black;
+  font-weight: 100;
+  text-align: center;
+  font-family: kanit, Helvetica, sans-serif, sans-serif;
+
+}
+
+.navbar {
+  text-align: center;
+}
+
+/* form {
+    margin: 100px;
+    margin-left: 50px;
+} */
+
+.schedule {
+  flex-direction: column;
+}
+
+.sign-in-form {
+  padding: 1rem 1.5em;
+  border-radius: .5rem;
+  background-color: #388e3c;
+  width: 400px;
+  /* margin-left: 530px; */
+  margin-bottom: 20px;
+  height: 400px;
+}
+
+.sign-in-form h4 {
+  margin-top: 20px;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 600;
+
+
+}
+
+.sign-in-form label {
+
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  font-family: kanit, Helvetica, sans-serif, sans-serif;
+  font-size: large;
+}
+
+.sign-in-form input {
+  color: rgb(0, 0, 0);
+}
+
+/* .sign-in-form input:focus {
+    opacity: .8;
+} */
+
+.sign-in-form-username,
+.sign-in-form-password {
+  border-radius: 3px;
   border: none;
-  padding: 0;
+  font-family: kanit, Helvetica, sans-serif, sans-serif;
+  transition: all ease .4s;
+}
+
+.sign-in-form-button {
+  border-radius: 3px;
+  border: 1px solid #fff;
+  color: rgb(255, 255, 255);
+  background-color: #4caf50;
+  margin-top: 15px;
+  letter-spacing: 1px;
+  width: 100%;
+  padding: 1rem;
+  transition: all ease .4s;
+  font-family: kanit, Helvetica, sans-serif, sans-serif;
   cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+.sign-in-form-button:hover {
+  background-color: #a5d6a7;
+  border-color: #66bb6a;
+
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+#login-form {
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  /* or inline-flex */
 }

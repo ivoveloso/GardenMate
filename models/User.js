@@ -25,7 +25,7 @@ User.init(
       allowNull: false,
       unique: true,
       validate: {
-        len: 10,
+        len: [10, 10],
       },
     },
     email: {
@@ -40,9 +40,14 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
+        len: [8, 30],
       },
     },
+    isAdmin: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+    }
   },
   {
     hooks: {

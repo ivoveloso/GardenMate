@@ -93,6 +93,7 @@ h3 {
   /* margin-left: 530px; */
   margin-bottom: 20px;
   height: 400px;
+  box-shadow: box1;
 }
 
 .sign-in-form h4 {
@@ -159,4 +160,9 @@ h3 {
   display: flex;
   justify-content: center;
   /* or inline-flex */
+}
+
+.sign-in-form {
+  box-shadow: 5px 10px 10px 2px rgb(186, 186, 186);
+
 }

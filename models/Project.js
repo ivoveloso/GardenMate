@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Activity extends Model {}
+class Project extends Model {}
 
-Activity.init(
+Project.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -13,7 +13,7 @@ Activity.init(
     },
     type: {
       type: DataTypes.STRING,
-      // allowNull: false,
+      allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
@@ -25,11 +25,11 @@ Activity.init(
     },
     date_booking: {
       type: DataTypes.DATE,
-      // allowNull: false,
+      allowNull: false,
     },
     time_allocation: {
       type: DataTypes.INTEGER,
-      // allowNull: false,
+      allowNull: false,
     },
     status: {
       type: DataTypes.BOOLEAN,
@@ -57,8 +57,8 @@ Activity.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'activity',
+    modelName: 'project',
   }
 );
 
-module.exports = Activity;
+module.exports = Project;

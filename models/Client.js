@@ -17,16 +17,16 @@ Client.init(
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     phone: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      // allowNull: false,
       unique: true,
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
       unique: true,
       validate: {
         isEmail: true,
@@ -34,7 +34,7 @@ Client.init(
     },
     address: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
   },
   {

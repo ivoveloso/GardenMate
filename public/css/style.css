@@ -4,7 +4,7 @@ h4 {
   font-family: kanit, Helvetica, sans-serif, sans-serif;
 
 
-  color: #00c853;
+  color: #60e960;
 
 }
 
@@ -44,14 +44,17 @@ h1 {
 
 #garden {
   color: black;
-  font-weight: 700;
+  font-weight: 600;
   font-style: italic;
+  text-shadow: 2px 2px 6px #c5c5c5;
 }
 
 #mate {
-  font-weight: 200;
-  color: #00c853;
+  font-weight: 300;
+  color: #60e960;
   font-kerning: normal;
+  font-style: normal;
+  text-shadow: 2px 2px 6px #c5c5c5;
 
 }
 
@@ -86,7 +89,7 @@ h5 {
 h4 {
   font-weight: 400px;
   color: white;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 h6 {
@@ -526,6 +529,18 @@ screen and (min-width: 40em) {
 
 }
 
+
+.task-card-section-feature.top-left-4 {
+
+
+  background: linear-gradient(#263238, #607d8b, #b0bec5);
+  text-align: left;
+  border-style: none;
+  border-radius: 6px;
+  padding: 10px;
+
+}
+
 #time-task,
 #time-task-2,
 #time-task-3 {
@@ -561,4 +576,13 @@ screen and (min-width: 40em) {
 #time-task-3 {
 
   padding: 10px;
+}
+
+#task-complete-checkbox:hover {
+  cursor: pointer;
+
+}
+
+#tick-icon:hover {
+  color: #60e960;
 }

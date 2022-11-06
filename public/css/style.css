@@ -9,12 +9,18 @@ h4 {
 }
 
 #day-date {
-  padding: 10px;
+  flex-direction: row;
+  ali: center;
+  padding: 20px;
   background-color: #bdbdbd;
   font-weight: 500;
 }
 
-
+h5,
+{
+font-family: kanit, Helvetica, sans-serif, sans-serif;
+color: rgb(255, 255, 255);
+}
 
 li {
   font-family: kanit, Helvetica, sans-serif, sans-serif;
@@ -23,8 +29,8 @@ li {
 
 h2 {
   font-family: kanit, Helvetica, sans-serif, sans-serif;
-  font-weight: 300;
-  color: #00c853
+  font-weight: 400;
+  color: #ffffff
 }
 
 ul {
@@ -75,6 +81,7 @@ h5 {
   text-align: left;
   font-family: kanit, Helvetica, sans-serif, sans-serif;
   font-weight: 500;
+  color: white;
 
 
 }
@@ -85,7 +92,9 @@ h4 {
 
 h6 {
   color: rgb(0, 0, 0);
-  font-weight: 400px;
+  font-weight: 300px;
+  font-family: Arial, Helvetica, sans-serif, Helvetica, sans-serif, sans-serif;
+  font-size: larger;
 }
 
 h3 {
@@ -177,6 +186,27 @@ h3 {
   justify-content: center;
 }
 
+.add-task-button {
+  border-radius: 3px;
+  border: 1px solid #fff;
+  color: rgb(255, 255, 255);
+  background-color: #00c853;
+  margin-top: 15px;
+  letter-spacing: 1px;
+  width: 100%;
+  padding: 1rem;
+  transition: all ease .4s;
+  font-family: kanit, Helvetica, sans-serif, sans-serif;
+  cursor: pointer;
+
+}
+
+.add-task-button:hover {
+  background-color: #60e960;
+  border-color: #66bb6a;
+
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -190,9 +220,9 @@ h3 {
 
 
 .topbar-responsive {
-  background: #424242;
+  background: #444444;
   padding: 1rem 1.5rem;
-  color: black;
+  color: rgb(79, 79, 79);
 }
 
 .topbar-responsive .topbar-responsive-logo {
@@ -201,7 +231,7 @@ h3 {
 }
 
 .topbar-responsive .menu {
-  background: #424242
+  background: none;
 }
 
 .topbar-responsive .menu li:last-of-type {
@@ -330,14 +360,14 @@ h3 {
 }
 
 
-.product-feature-section {
+.task-card-section {
   background: none;
   padding: 1rem;
   flex: box;
 
 }
 
-.product-feature-section-outer {
+.task-card-section-outer {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -351,18 +381,18 @@ h3 {
 
 @media print,
 screen and (min-width: 40em) {
-  .product-feature-section-outer {
+  .task-card-section-outer {
     max-width: 100%;
     justify-content: center;
   }
 }
 
-.product-feature-section-headline {
+.task-card-section-headline {
   margin-bottom: 2rem;
   text-align: center;
 }
 
-.product-feature-section-inner {
+.task-card-section-inner {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -378,10 +408,11 @@ screen and (min-width: 40em) {
   border-style: none;
   border-radius: 4px;
   box-shadow: 5px 10px 10px 2px rgb(186, 186, 186);
-  /* width: 700px */
+
+  width: 700px;
 }
 
-.product-feature-section-feature {
+*/ .task-card-section-feature {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -402,36 +433,25 @@ screen and (min-width: 40em) {
 
 
 
-/* .product-feature-section-feature.top-right {
-  border-bottom: 1px solid #ffffff;
-  background-color: #4caf50;
-  text-align: left;
-} */
-
-/* .product-feature-section-feature.top-left {
-  margin: 20px;
-  text-align: left;
-} */
-
-.product-feature-section-feature .feature-title {
+.task-card-section-feature .feature-title {
   margin-bottom: 0;
   line-height: 16px;
   font-size: 0.875rem;
   text-align: left;
 }
 
-.product-feature-section-feature .feature-desc {
+.task-card-section-feature .feature-desc {
   margin-bottom: 0;
 }
 
-.product-feature-section-feature .fa {
+.task-card-section-feature .fa {
   margin-right: 1.25rem;
   font-size: 2rem;
 }
 
 @media print,
 screen and (min-width: 40em) {
-  .product-feature-section-feature {
+  .task-card-section-feature {
     padding: 2rem;
     -webkit-flex: 1 0 50%;
     -ms-flex: 1 0 50%;
@@ -461,6 +481,7 @@ screen and (min-width: 40em) {
   margin-bottom: 50px;
   text-align: left;
   max-width: 600px;
+  min-width: 600px;
   border-style: solid;
   border-radius: 10px;
   border-color: rgb(255, 255, 255);
@@ -468,15 +489,13 @@ screen and (min-width: 40em) {
 }
 
 #task-color {
-  color: #76ff03;
+  color: #ffffff;
   font-weight: 600px;
 }
 
-/* .product-feature-section-feature.top-left {
-  justify-content: center;
-} */
 
-.product-feature-section-feature.top-left {
+
+.task-card-section-feature.top-left {
 
   /* border-bottom: 40px solid #ffffff; */
   background-color: #00c853;
@@ -484,4 +503,60 @@ screen and (min-width: 40em) {
   border-style: none;
   border-radius: 6px;
 
+}
+
+.task-card-section-feature.top-left-2 {
+
+  /* border-bottom: 40px solid #ffffff; */
+  background-color: #01579b;
+  text-align: left;
+  border-style: none;
+  border-radius: 6px;
+
+}
+
+.task-card-section-feature.top-left-3 {
+
+  /* border-bottom: 40px solid #ffffff; */
+  background-color: #ff9800;
+  text-align: left;
+  border-style: none;
+  border-radius: 6px;
+  padding-left: 10px;
+
+}
+
+#time-task,
+#time-task-2 {
+
+  text-align: left;
+  padding: 10px;
+  border-style: none;
+  border-radius: 6px;
+}
+
+#add-task-background {
+  background-color: #e0e0e0;
+  padding: 10px;
+}
+
+#add-task-button {
+  width: 200px;
+  background-color: grey;
+}
+
+.date-container {
+
+  flex: box;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#add-task-button:hover {
+  background-color: #00c853;
+}
+
+#time-task-3 {
+  background-color: #ff9800;
+  padding: 10px;
 }

@@ -9,18 +9,15 @@ h4 {
 }
 
 #day-date {
-  flex-direction: row;
-  ali: center;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-  background-color: #bdbdbd;
+  background-color: #ffffff;
   font-weight: 500;
 }
 
 h5,
-{
-font-family: kanit, Helvetica, sans-serif, sans-serif;
-color: rgb(255, 255, 255);
-}
+
 
 li {
   font-family: kanit, Helvetica, sans-serif, sans-serif;
@@ -29,8 +26,8 @@ li {
 
 h2 {
   font-family: kanit, Helvetica, sans-serif, sans-serif;
-  font-weight: 400;
-  color: #ffffff
+  font-weight: 300;
+  color: #60e960
 }
 
 ul {
@@ -87,7 +84,9 @@ h5 {
 }
 
 h4 {
+  font-weight: 400px;
   color: white;
+  font-style: italic;
 }
 
 h6 {
@@ -119,7 +118,7 @@ h3 {
 .sign-in-form {
   padding: 1rem 1.5em;
   border-radius: .5rem;
-  background-color: #00c853;
+  background: linear-gradient(#37474f, #546e7a, #607d8b);
   width: 400px;
   margin-bottom: 20px;
   height: 400px;
@@ -165,7 +164,7 @@ h3 {
   border-radius: 3px;
   border: 1px solid #fff;
   color: rgb(255, 255, 255);
-  background-color: #00c853;
+  background-color: none;
   margin-top: 15px;
   letter-spacing: 1px;
   width: 100%;
@@ -190,7 +189,7 @@ h3 {
   border-radius: 3px;
   border: 1px solid #fff;
   color: rgb(255, 255, 255);
-  background-color: #00c853;
+  background-color: none;
   margin-top: 15px;
   letter-spacing: 1px;
   width: 100%;
@@ -220,7 +219,7 @@ h3 {
 
 
 .topbar-responsive {
-  background: #444444;
+  background: linear-gradient(#263238, #607d8b, #b0bec5);
   padding: 1rem 1.5rem;
   color: rgb(79, 79, 79);
 }
@@ -407,7 +406,7 @@ screen and (min-width: 40em) {
   border-color: #ffffff;
   border-style: none;
   border-radius: 4px;
-  box-shadow: 5px 10px 10px 2px rgb(186, 186, 186);
+  /* box-shadow: 5px 10px 10px 10px rgb(186, 186, 186); */
 
   width: 700px;
 }
@@ -477,11 +476,12 @@ screen and (min-width: 40em) {
 
 #task-card {
   flex-direction: row;
-  box-shadow: 5px 10px 10px 2px rgb(186, 186, 186);
+  box-shadow: 5px 10px 10px 6px rgb(205, 205, 205);
   margin-bottom: 50px;
   text-align: left;
-  max-width: 600px;
-  min-width: 600px;
+  width: 500px;
+  min-width: 500px;
+  /* height: 200px; */
   border-style: solid;
   border-radius: 10px;
   border-color: rgb(255, 255, 255);
@@ -498,7 +498,7 @@ screen and (min-width: 40em) {
 .task-card-section-feature.top-left {
 
   /* border-bottom: 40px solid #ffffff; */
-  background-color: #00c853;
+  background: linear-gradient(#00c853, #00e676, #69f0ae);
   text-align: left;
   border-style: none;
   border-radius: 6px;
@@ -507,8 +507,8 @@ screen and (min-width: 40em) {
 
 .task-card-section-feature.top-left-2 {
 
-  /* border-bottom: 40px solid #ffffff; */
-  background-color: #01579b;
+
+  background: linear-gradient(#01579b, #0288d1, #03a9f4);
   text-align: left;
   border-style: none;
   border-radius: 6px;
@@ -517,17 +517,18 @@ screen and (min-width: 40em) {
 
 .task-card-section-feature.top-left-3 {
 
-  /* border-bottom: 40px solid #ffffff; */
-  background-color: #ff9800;
+
+  background: linear-gradient(#f57f17, #f9a825, #fbc02d);
   text-align: left;
   border-style: none;
   border-radius: 6px;
-  padding-left: 10px;
+  padding: 10px;
 
 }
 
 #time-task,
-#time-task-2 {
+#time-task-2,
+#time-task-3 {
 
   text-align: left;
   padding: 10px;
@@ -542,7 +543,7 @@ screen and (min-width: 40em) {
 
 #add-task-button {
   width: 200px;
-  background-color: grey;
+  background-color: none;
 }
 
 .date-container {
@@ -553,10 +554,11 @@ screen and (min-width: 40em) {
 }
 
 #add-task-button:hover {
-  background-color: #00c853;
+  background-color: #60e960;
+
 }
 
 #time-task-3 {
-  background-color: #ff9800;
+
   padding: 10px;
 }

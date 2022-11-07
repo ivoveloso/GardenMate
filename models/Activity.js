@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Activity extends Model {}
@@ -43,7 +43,7 @@ Activity.init(
       references: {
         model: 'user',
         key: 'id',
-      },},
+      }},
     client_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -58,7 +58,7 @@ Activity.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'activity',
-  }
+  },
 );
 
 module.exports = Activity;

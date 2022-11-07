@@ -7,7 +7,7 @@ User.hasMany(Activity, {
 });
 
 Activity.belongsTo(User, {
-  foreignKey: 'user_id'
+  foreignKey: 'user_id',
 });
 
 Client.hasMany(Activity, {
@@ -15,7 +15,7 @@ Client.hasMany(Activity, {
 });
 
 Activity.belongsTo(Client, {
-  foreignKey: 'client_id'
+  foreignKey: 'client_id',
 });
 
-module.exports = { User, Activity, Client };
+module.exports = {User, Activity, Client};

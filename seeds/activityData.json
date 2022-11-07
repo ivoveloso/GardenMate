@@ -1,6 +1,5 @@
 [
   {
-    "name": "Mowing near me",
     "type": "mowing",
     "description": "Mow the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",
@@ -9,7 +8,6 @@
     "client_id": "1"
   },
   {
-    "name": "Weeding near me",
     "type": "weed",
     "description": "Weeding the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",
@@ -18,7 +16,6 @@
     "client_id": "2"
   },
   {
-    "name": "shrubbing near me",
     "type": "shrubbing",
     "description": "shrubbing the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",
@@ -27,7 +24,6 @@
     "client_id": "3"
   },
   {
-    "name": "Weeding near me",
     "type": "weed",
     "description": "weed the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",
@@ -36,7 +32,6 @@
     "client_id": "4"
   },
   {
-    "name": "Mowing near me1",
     "type": "mowing",
     "description": "Mow the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",
@@ -45,7 +40,6 @@
     "client_id": "5"
   },
   {
-    "name": "Mowing near me2",
     "type": "mowing",
     "description": "Mow the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",
@@ -54,7 +48,6 @@
     "client_id": "6"
   },
   {
-    "name": "Mowing near me3",
     "type": "mowing",
     "description": "Mow the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",
@@ -63,7 +56,6 @@
     "client_id": "7"
   },
   {
-    "name": "Mowing near me4",
     "type": "mowing",
     "description": "Mow the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",
@@ -72,7 +64,6 @@
     "client_id": "8"
   },
   {
-    "name": "Mowing near me5534",
     "type": "mowing",
     "description": "Mow the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",
@@ -81,15 +72,14 @@
     "client_id": "9"
   },
   {
-    "name": "Mowing near me23",
     "type": "mowing",
     "description": "Mow the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",
     "time_allocation": "120",
     "user_id": "2",
     "client_id": "4"
-  },  {
-    "name": "Mowing near me33",
+  }, 
+  {
     "type": "mowing",
     "description": "Mow the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",
@@ -98,7 +88,6 @@
     "client_id": "10"
   },
   {
-    "name": "Mowing near me11",
     "type": "mowing",
     "description": "Mow the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",
@@ -107,7 +96,6 @@
     "client_id": "5"
   },
   {
-    "name": "Mowing near me22",
     "type": "mowing",
     "description": "Mow the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",
@@ -116,7 +104,6 @@
     "client_id": "8"
   },
   {
-    "name": "Mowing near me21",
     "type": "mowing",
     "description": "Mow the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",
@@ -125,7 +112,6 @@
     "client_id": "9"
   },
   {
-    "name": "Mowing near me23",
     "type": "mowing",
     "description": "Mow the lawn",
     "date_booking": "2022-11-03T10:40:39.266Z",

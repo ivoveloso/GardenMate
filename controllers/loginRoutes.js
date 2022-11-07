@@ -5,7 +5,6 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     res.render('login', {
-      projects,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -46,7 +45,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({plain: true});
 
-    res.render('profile', {
+    res.render('user', {
       ...user,
       logged_in: true,
     });

@@ -13,7 +13,7 @@ Activity.init(
     },
     type: {
       type: DataTypes.STRING,
-      // allowNull: false,
+      allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
@@ -25,11 +25,11 @@ Activity.init(
     },
     date_booking: {
       type: DataTypes.DATE,
-      // allowNull: false,
+      allowNull: false,
     },
     time_allocation: {
       type: DataTypes.INTEGER,
-      // allowNull: false,
+      allowNull: false,
     },
     status: {
       type: DataTypes.BOOLEAN,

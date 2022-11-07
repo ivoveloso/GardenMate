@@ -14,16 +14,12 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const activity of activityData) {
-    await Activity.create({
-      ...Activity
-    });
+  for (const client of clientData) {
+    await Client.create(client);
   }
 
-  for (const client of clientData) {
-    await Client.create({
-      ...Client
-    });
+  for (const activity of activityData) {
+    await Activity.create(activity);
   }
 
   process.exit(0);

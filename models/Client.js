@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Client extends Model {
@@ -43,7 +43,7 @@ Client.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'client',
-  }
+  },
 );
 
 module.exports = Client;

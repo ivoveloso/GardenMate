@@ -229,7 +229,8 @@ h3 {
 
 .topbar-responsive .topbar-responsive-logo {
   color: #fefefe;
-  vertical-align: middle;
+  /* vertical-align: middle; */
+  justify-content: left;
 }
 
 .topbar-responsive .menu {
@@ -585,4 +586,14 @@ screen and (min-width: 40em) {
 
 #tick-icon:hover {
   color: #60e960;
+}
+
+
+.top-bar-title {
+  flex-direction: row;
+  justify-content: left;
+}
+
+#name-drop {
+  text-shadow: red 2px 5px;
 }

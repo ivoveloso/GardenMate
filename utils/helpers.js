@@ -21,7 +21,6 @@ module.exports = {
   },
 
   format_start_time: (date1) => {
-    // We use the 'toLocaleTimeString()' method to format the time as H:MM:SS AM/PM
     const date2 = new Date(date1);
     if (date2.getUTCHours() < 11) {
       return date2.getUTCHours() + "am";
@@ -31,7 +30,7 @@ module.exports = {
   },
 
   format_end_time: (date1, duration) => {
-    // We use the 'toLocaleTimeString()' method to format the time as H:MM:SS AM/PM
+
     const date2 = new Date(date1);
     if (date2.getUTCHours() + duration/60 < 11) {
       return date2.getUTCHours() + duration/60 + "am";
@@ -39,5 +38,4 @@ module.exports = {
       return date2.getUTCHours() + duration/60 + "pm";
     }
   },
-
 };

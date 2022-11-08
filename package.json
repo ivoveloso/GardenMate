@@ -9,7 +9,6 @@
     "seed": "node seeds/seed.js",
     "watch": "nodemon server.js",
     "lint": "npx eslint **/*.js --fix"
-
   },
   "keywords": [],
   "author": "",
@@ -21,6 +20,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
+    "jsonexport": "^3.2.0",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.20",
     "sequelize": "^6.3.5"

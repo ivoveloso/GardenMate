@@ -6,7 +6,7 @@ const jsonexport = require('jsonexport');
 router.get('/', async (req, res) => {
   try {
     res.render('login', {
-      logged_in: req.session.logged_in,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -18,16 +18,23 @@ router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Activity, include: [{ model: Client }] }],
+      attributes: { exclude: ['password']},
+      include: [{ model: Activity, include: [{ model: Client }] }]
     });
 
     const user = userData.get({ plain: true });
-    // console.log(user);
+    const views = userData.isAdmin ? 'admin' : 'profile';
 
-    res.render('user', {
-      ...user,
-      logged_in: true,
+    const employee = await User.findAll({
+      include: this.name
+    });
+
+    // const employeeName = employee.get({plain: true});
+    console.log(employee);
+
+    res.render(views, {
+      ...user, ...employee,
+      logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);
@@ -44,28 +51,26 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/export', withAuth, async (req,res) => {
-
+router.get('/export', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Activity, include: [{ model: Client }] }],
+      include: [{ model: Activity }]
     });
 
     const user = userData.get({ plain: true });
     // console.log(user.activities);
-    
-    jsonexport(user.activities, {rowDelimiter: '|'}, function(err, csv){
-      if (err) return console.error(err);
-      console.log(csv);
-  });
 
+    jsonexport(user.activities, { rowDelimiter: '|' }, function (err, csv) {
+      if (err) {
+        return console.error(err);
+      }
+      console.log(csv);
+    });
   } catch (err) {
     res.status(500).json(err);
   }
-
-  
-})
+});
 
 module.exports = router;

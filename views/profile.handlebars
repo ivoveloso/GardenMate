@@ -1,0 +1,42 @@
+<nav class="top-bar topbar-responsive">
+    <div class="top-bar-title">
+
+        <a class="topbar-responsive-logo" href="#"><strong>
+                <h2>Welcome, {{name}}</h2>
+                <h3>{{current_date}}</h3>
+            </strong></a>
+
+    </div>
+    <div id="topbar-responsive" class="topbar-responsive-links">
+        <div class="top-bar-right">
+            <ul class="menu simple vertical medium-horizontal">
+
+                <li><a href="#">Export</a></li>
+                <li id="logout-link"><a href="#">LOGOUT</a></li>
+
+                
+
+            </ul>
+        </div>
+    </div>
+
+</nav>
+
+
+<br>
+<div class="card-container">
+
+
+
+    <section class="task-card-section">
+        <div class="task-card-section-outer">
+
+            {{#each activities as |activity|}}
+            {{> card}}
+            {{/each}}
+    </section>
+</div>
+<br>
+
+
+<script src="./js/logout.js"></script>

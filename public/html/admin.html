@@ -23,7 +23,7 @@
         <div class="top-bar-title">
 
             <a class="topbar-responsive-logo" href="#"><strong>
-                    <h2>Craig Power</h2>
+                    <h2><i class="fa-solid fa-user"></i> Craig Power</h2>
                     <h3>Monday 7 November 2022</h3>
 
                     <button type="submit" class="sign-in-form-button" id="add-task-button">ADD TASK</button>
@@ -34,12 +34,10 @@
             <div class="top-bar-right">
                 <ul class="menu simple vertical medium-horizontal">
 
-
-                    <li><a href="#">view employee</a></li>
-                    <li><a href="#">add new user</a></li>
-                    <li><a href="#">delete user</a></li>
-                    <li><a href="#">export</a></li>
-                    <li><a href="#">LOGOUT</a></li>
+                    <li><a href="#"><i class="fa-solid fa-user-plus"></i></i> add new user</a></li>
+                    <li><a href="#"><i class="fa-solid fa-user-minus"></i> delete user</a></li>
+                    <li><a href="#"><i class="fa-solid fa-file-export"></i> export</a></li>
+                    <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> LOGOUT</a></li>
                 </ul>
             </div>
         </div>
@@ -49,10 +47,63 @@
 
     <br>
     <div class="card-container">
+        <div id="task-card">
+
+            <div class="task-card-section-feature top-left-4">
+
+
+                <div id="new-task-title">
+                    <h5>NEW TASK</h5>
+                </div>
+
+            </div>
+            <br>
+
+            <div class="task-card-section-feature bottom">
+                <form>
+                    <div class="new-task-form">
+                        <label for="new-task-date">date</label>
+
+                        <input type="text" class="new-task-date" id="new-task-date">
+
+                        <label for="new-task-date">time</label>
+
+                        <input type="text" class="new-task-time" id="new-task-time">
+
+                        <label for="new-task-client">client name</label>
+
+                        <input type="text" class="new-task-client" id="new-task-client">
+
+                        <label for="new-task-address">client address</label>
+
+                        <input type="text" class="new-task-address" id="new-task-address">
+
+                        <label for="notes-input">notes</label>
+
+                        <textarea id="notes-input" name="notes-input"></textarea>
 
 
 
-    </div>
+                        <button type="submit" id="new-task" class="sign-in-form-button">CREATE TASK</button>
+                    </div>
+                </form>
+
+                <div id="task-complete-checkbox" id="tick-icon">
+
+
+
+                    <br>
+                    <h4 style="color:#546e7a">
+                        <i class="fa-solid fa-trash"></i>
+                        delete
+                    </h4>
+
+                </div>
+            </div>
+
+
+
+        </div>
 
 
 

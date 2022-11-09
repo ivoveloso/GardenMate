@@ -1,6 +1,5 @@
 module.exports = {
   current_date: () => {
-
     return new Date().toDateString();
   },
   format_amount: (amount) => {
@@ -23,19 +22,18 @@ module.exports = {
   format_start_time: (date1) => {
     const date2 = new Date(date1);
     if (date2.getUTCHours() < 11) {
-      return date2.getUTCHours() + "am";
+      return date2.getUTCHours() + 'am';
     } else {
-      return date2.getUTCHours() + "pm";
+      return date2.getUTCHours() + 'pm';
     }
   },
 
   format_end_time: (date1, duration) => {
-
     const date2 = new Date(date1);
-    if (date2.getUTCHours() + duration/60 < 11) {
-      return date2.getUTCHours() + duration/60 + "am";
+    if (date2.getUTCHours() + duration / 60 < 11) {
+      return date2.getUTCHours() + duration / 60 + 'am';
     } else {
-      return date2.getUTCHours() + duration/60 + "pm";
+      return date2.getUTCHours() + duration / 60 + 'pm';
     }
-  },
+  }
 };

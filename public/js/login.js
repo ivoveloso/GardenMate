@@ -3,14 +3,16 @@ const loginFormHandler = async (event) => {
 
   // Collect values from the login form
   const email = document.querySelector('#sign-in-form-username').value.trim();
-  const password = document.querySelector('#sign-in-form-password').value.trim();
+  const password = document
+    .querySelector('#sign-in-form-password')
+    .value.trim();
 
   if (email && password) {
     // Send a POST request to the API endpoint
     const response = await fetch('/api/users/login', {
       method: 'POST',
-      body: JSON.stringify({email, password}),
-      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ email, password }),
+      headers: { 'Content-Type': 'application/json' }
     });
 
     if (response.ok) {
@@ -25,4 +27,3 @@ const loginFormHandler = async (event) => {
 document
   .querySelector('.form-sign-in')
   .addEventListener('submit', loginFormHandler);
-

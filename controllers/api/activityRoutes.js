@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const {Activity} = require('../../models');
+const { Activity } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
     const newActivity = await Activity.create({
       ...req.body,
-      user_id: req.session.user_id,
+      user_id: req.session.user_id
     });
 
     res.status(200).json(newActivity);
@@ -20,12 +20,12 @@ router.delete('/:id', withAuth, async (req, res) => {
     const activityData = await Activity.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
-      },
+        user_id: req.session.user_id
+      }
     });
 
     if (!activityData) {
-      res.status(404).json({message: 'No project found with this id!'});
+      res.status(404).json({ message: 'No project found with this id!' });
       return;
     }
 

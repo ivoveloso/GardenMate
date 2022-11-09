@@ -6,7 +6,7 @@ var csv = require('fast-csv');
 router.get('/', async (req, res) => {
   try {
     res.render('login', {
-      logged_in: req.session.logged_in,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -18,16 +18,20 @@ router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Activity, include: [{ model: Client }] }],
+      attributes: { exclude: ['password']},
+      include: [{ model: Activity, include: [{ model: Client }] }]
     });
 
     const user = userData.get({ plain: true });
-    // console.log(user);
+    const views = userData.isAdmin ? 'admin' : 'profile';
 
-    res.render('user', {
-      ...user,
-      logged_in: true,
+    const employees = await User.findAll();
+    const employeeName = employees.map(individualEmployee => individualEmployee.get({ plain: true}));
+
+    res.render(views, {
+      employee: employeeName,
+      user: user,
+      logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);
@@ -44,26 +48,27 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/export', withAuth, async (req,res) => {
-
+router.get('/export', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Activity, include: [{ model: Client }] }],
+      include: [{ model: Activity }]
     });
 
     const user = userData.get({ plain: true });
+    // console.log(user.activities);
     
-      res.writeHead(200, {
-        'Content-Type': 'text/csv',
-        'Content-Disposition': 'attachment; filename=' + user.name + '_Export.csv'
-    });
-    csv.write(user.activities,{headers:true}).pipe(res);
+    jsonexport(user.activities, {rowDelimiter: '|'}, function(err, csv){
+      if (err) return console.error(err);
+      console.log(csv);
+  });
 
   } catch (err) {
     res.status(500).json(err);
   }
+
+  
 })
 
 module.exports = router;

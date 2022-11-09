@@ -1,12 +1,8 @@
 <nav class="top-bar topbar-responsive">
     <div class="top-bar-title">
-
-        <a class="topbar-responsive-logo" href="#"><strong>
-                <h2>Welcome, {{name}}</h2>
-                <h3>{{current_date}}</h3>
-                <button type="submit" class="sign-in-form-button" id="add-task-button">ADD TASK</button>
-            </strong></a>
-
+        <h2>Welcome, {{user.name}}</h2>
+        <h3>{{current_date}}</h3>
+        <button type="submit" class="sign-in-form-button" id="add-task-button">ADD TASK</button>
     </div>
     <div id="topbar-responsive" class="topbar-responsive-links">
         <div class="top-bar-right">
@@ -15,16 +11,17 @@
                 <li><a href="#" data-toggle="modal" data-target="#ModalLoginForm">Add new user</a></li>
                 <li>
                     <div class="dropdown show">
-                        <a  href="#" id="dropdownMenuLink"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
                             Delete employee
                         </a>
+                      
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">{{user.dataValues.name}}</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            
+                            {{#each employee}}
+                            <a class="dropdown-item" href="#" id="{{this.name}}">{{this.name}}</a>
+                            {{/each}}
+
                         </div>
                     </div>
                 </li>
@@ -46,7 +43,7 @@
     <section class="task-card-section">
         <div class="task-card-section-outer">
 
-            {{#each activities as |activity|}}
+            {{#each user.activities as |activity|}}
             {{> card}}
             {{/each}}
 
@@ -85,6 +82,13 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label class="control-label">confim Password</label>
+                            <div>
+                                <input type="password" class="form-control input-lg" id="confirm_password" value="">
+                            </div>
+                        </div>
+
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" id="isAdmin"> Employee is an admin
@@ -115,3 +119,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+

@@ -5,8 +5,16 @@ const newFormHandler = async (event) => {
   const email = document.querySelector('#email').value.trim();
   const mobile = document.querySelector('#mobile').value.trim();
   const password = document.querySelector('#password').value.trim();
+  const confirmPassword = document
+    .querySelector('#confirm_password')
+    .value.trim();
   const admin = document.querySelector('#isAdmin');
   const isAdmin = admin.checked;
+
+  if (password !== confirmPassword) {
+    alert('passwords are not thesame');
+    return;
+  }
 
   const response = await fetch('/api/users', {
     method: 'POST',
@@ -17,7 +25,8 @@ const newFormHandler = async (event) => {
   });
 
   if (response.ok) {
-    document.location.reload();
+    location.reload();
+    alert('employee successfully created');
   } else {
     alert('Failed to add new employee');
   }

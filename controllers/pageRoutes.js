@@ -25,15 +25,12 @@ router.get('/profile', withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
     const views = userData.isAdmin ? 'admin' : 'profile';
 
-    const employee = await User.findAll({
-      include: this.name
-    });
-
-    // const employeeName = employee.get({plain: true});
-    console.log(employee);
+    const employees = await User.findAll();
+    const employeeName = employees.map(individualEmployee => individualEmployee.get({ plain: true}));
 
     res.render(views, {
-      ...user, ...employee,
+      employee: employeeName,
+      user: user,
       logged_in: true
     });
   } catch (err) {

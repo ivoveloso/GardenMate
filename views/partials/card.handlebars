@@ -4,9 +4,9 @@
 
                         <div id="time-task">
                             <h5>
-                            <span id="task-color">{{format_start_time user.date_booking}} - {{format_end_time user.date_booking time_allocation}} / {{user.type}} <i
+                            <span id="task-color">{{format_start_time date_booking}} - {{format_end_time date_booking time_allocation}} / {{type}} <i
                             class="fa-solid fa-scissors"></i></span></h5>
-                            <h5>{{user.client.name}}</h5>
+                            <h5>{{client.name}}</h5>
                         </div>
 
 
@@ -18,7 +18,7 @@
         <div>
 
             <h6 class="feature-desc"><i class="fa fa-map-marker" style="color:#546e7a" aria-hidden="true"></i>
-                {{user.client.address}}</h6>
+                {{client.address}}</h6>
 
         </div>
     </div>

@@ -2,7 +2,7 @@
     <div class="top-bar-title">
 
         <a class="topbar-responsive-logo" href="#"><strong>
-                <h2>Welcome, {{name}}</h2>
+                <h2>Welcome, {{user.name}}</h2>
                 <h3>{{current_date}}</h3>
             </strong></a>
 
@@ -31,7 +31,7 @@
     <section class="task-card-section">
         <div class="task-card-section-outer">
 
-            {{#each activities as |activity|}}
+            {{#each user.activities as |activity|}}
             {{> card}}
             {{/each}}
     </section>

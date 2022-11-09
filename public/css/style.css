@@ -8,6 +8,42 @@ h4 {
 
 }
 
+h2 {
+  text-shadow: 1px 1px 3px rgb(33, 33, 33);
+}
+
+h2,
+h3 {
+  text-align: left;
+}
+
+#new-task {
+  color: #263238;
+  background-color: #eceff1;
+}
+
+#new-task-title {
+  background-color: none;
+  justify-content: center;
+  text-align: center;
+}
+
+#delete-icon:hover {
+  color: #e57373;
+}
+
+.new-task-form {
+  font-family: kanit, Helvetica, sans-serif, sans-serif;
+  color: #263238;
+
+}
+
+#new-task:hover {
+  color: #ffffff;
+  background-color: #60e960;
+}
+
+
 #day-date {
   flex-direction: column;
   align-items: center;
@@ -78,7 +114,7 @@ ul {
 
 
 h5 {
-  text-align: left;
+  /* text-align: left; */
   font-family: kanit, Helvetica, sans-serif, sans-serif;
   font-weight: 500;
   color: white;
@@ -88,7 +124,7 @@ h5 {
 
 h4 {
   font-weight: 400px;
-  color: white;
+  color: rgb(0, 0, 0);
   /* font-style: italic; */
 }
 
@@ -124,7 +160,7 @@ h3 {
   background: linear-gradient(#37474f, #546e7a, #607d8b);
   width: 400px;
   margin-bottom: 20px;
-  height: 400px;
+  /* height: 600px; */
   box-shadow: box1;
 }
 
@@ -132,7 +168,8 @@ h3 {
   margin-top: 20px;
   color: white;
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 400;
+
 
 
 }
@@ -141,7 +178,7 @@ h3 {
 
   color: #ffffff;
   letter-spacing: 1px;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 1rem;
   font-family: kanit, Helvetica, sans-serif, sans-serif;
   font-size: large;
@@ -175,6 +212,7 @@ h3 {
   transition: all ease .4s;
   font-family: kanit, Helvetica, sans-serif, sans-serif;
   cursor: pointer;
+  margin-bottom: 15px;
 
 }
 
@@ -185,7 +223,9 @@ h3 {
 }
 
 #login-form {
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .add-task-button {
@@ -217,6 +257,8 @@ h3 {
 
 .sign-in-form {
   box-shadow: 5px 10px 10px 2px rgb(186, 186, 186);
+  flex-direction: column;
+  justify-content: center;
 
 }
 

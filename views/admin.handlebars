@@ -17,25 +17,26 @@
         <div class="top-bar-right">
             <ul class="menu simple vertical medium-horizontal">
 
-                <li><a href="#" data-toggle="modal" data-target="#ModalLoginForm">Add new user</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#ModalLoginForm"><i class="fa-solid fa-user-plus"></i>
+                        add new user</a></li>
                 <li>
                     <div class="dropdown show">
                         <a href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            Delete employee
+                            <i class="fa-solid fa-user-minus"></i> delete user
                         </a>
 
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             {{#each employee}}
-                            <a class="dropdown-item" href="#" id="{{this.name}}">{{this.name}}</a>
+                            <a class="dropdown-item" href="#" id="{{this.name}}" style="color:black">{{this.name}}</a>
                             {{/each}}
 
                         </div>
                     </div>
                 </li>
-                <li><a href="#">Export</a></li>
-                <li id="logout-link"><a href="#">LOGOUT</a></li>
+                <li><a href="#"><i class="fa-solid fa-file-export"></i> Export</a></li>
+                <li id="logout-link"><a href="#"><i class="fa-solid fa-right-from-bracket"></i> LOGOUT</a></li>
 
             </ul>
         </div>

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Activity, User, Client } = require('../models');
 const withAuth = require('../utils/auth');
-const jsonexport = require('jsonexport');
+var csv = require('fast-csv');
 
 router.get('/', async (req, res) => {
   try {
@@ -54,18 +54,16 @@ router.get('/export', withAuth, async (req,res) => {
     });
 
     const user = userData.get({ plain: true });
-    // console.log(user.activities);
     
-    jsonexport(user.activities, {rowDelimiter: '|'}, function(err, csv){
-      if (err) return console.error(err);
-      console.log(csv);
-  });
+      res.writeHead(200, {
+        'Content-Type': 'text/csv',
+        'Content-Disposition': 'attachment; filename=' + user.name + '_Export.csv'
+    });
+    csv.write(user.activities,{headers:true}).pipe(res);
 
   } catch (err) {
     res.status(500).json(err);
   }
-
-  
 })
 
 module.exports = router;

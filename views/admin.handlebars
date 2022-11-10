@@ -2,7 +2,7 @@
 
 
     <div class="top-bar-title">
-        <h2>Welcome, {{user.name}}</h2>
+        <h2><i class="fa-solid fa-leaf"></i> Welcome, {{user.name}}</h2>
         <h3>{{current_date}}</h3>
 
         <button type="submit" class="sign-in-form-button">
@@ -16,26 +16,30 @@
     <div id="topbar-responsive" class="topbar-responsive-links">
         <div class="top-bar-right">
             <ul class="menu simple vertical medium-horizontal">
+                <li><a href="#"><i class="fa-solid fa-user" style="color: #60e960"></i> select user</a></li>
 
-                <li><a href="#" data-toggle="modal" data-target="#ModalLoginForm">Add new user</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#ModalLoginForm"><i class="fa-solid fa-user-plus"
+                            style="color: #60e960"></i>
+                        add new user</a></li>
                 <li>
                     <div class="dropdown show">
                         <a href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            Delete employee
+                            <i class="fa-solid fa-user-minus" style="color: #60e960"></i> delete user
                         </a>
 
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             {{#each employee}}
-                            <a class="dropdown-item" href="#" id="{{this.name}}">{{this.name}}</a>
+                            <a class="dropdown-item" href="#" id="{{this.name}}" style="color:black">{{this.name}}</a>
                             {{/each}}
 
                         </div>
                     </div>
                 </li>
-                <li><a href="#">Export</a></li>
-                <li id="logout-link"><a href="#">LOGOUT</a></li>
+                <li><a href="#"><i class="fa-solid fa-file-export" style="color: #60e960"></i> Export</a></li>
+                <li id="logout-link"><a href="#"><i class="fa-solid fa-right-from-bracket" style="color: #60e960"></i>
+                        LOGOUT</a></li>
 
             </ul>
         </div>

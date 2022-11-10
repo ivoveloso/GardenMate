@@ -17,7 +17,22 @@
     <div id="topbar-responsive" class="topbar-responsive-links">
         <div class="top-bar-right">
             <ul class="menu simple vertical medium-horizontal">
-                <li><a href="#"><i class="fa-solid fa-user" style="color: #60e960"></i> select user</a></li>
+
+                <li>
+                    <div class="dropdown show">
+                        <a href="#" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-user-minus" style="color: #60e960"></i> select user
+                        </a>
+
+
+                        <div class="dropdown-menu select-menu" aria-labelledby="dropdownMenuLink1">
+                            {{#each employee}}
+                            <a class="dropdown-item" href="" data-id="{{this.id}}" style="color:black">{{this.name}}</a>
+                            {{/each}}
+
+                        </div>
+                </li>
 
                 <li><a href="#" data-toggle="modal" data-target="#ModalLoginForm"><i class="fa-solid fa-user-plus"
                             style="color: #60e960"></i>
@@ -30,7 +45,8 @@
                         </a>
 
 
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-menu delete-menu" aria-labelledby="dropdownMenuLink">
+
                             {{#each employee}}
                             <a class="dropdown-item" href="" data-id="{{this.id}}" style="color:black">{{this.name}}</a>
                             {{/each}}
@@ -57,7 +73,7 @@
     <section class="task-card-section">
         <div class="task-card-section-outer">
 
-            {{#each user.activities as |activity|}}
+            {{#each activities as |activity|}}
             {{> card}}
             {{/each}}
 

@@ -31,7 +31,7 @@
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             {{#each employee}}
-                            <a class="dropdown-item" href="#" id="{{this.name}}" style="color:black">{{this.name}}</a>
+                            <a class="dropdown-item" href="" data-id="{{this.id}}" style="color:black">{{this.name}}</a>
                             {{/each}}
 
                         </div>
@@ -120,19 +120,6 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 </div>
-
-
-{{!--
-<div class="form-group">
-    <label for="filter">Search in Category</label>
-    <select class="form-control  selectpicker">
-        <option>Mustard</option>
-        <option>Ketchup</option>
-        <option>Relish</option>
-    </select>
-</div> --}}
-
-
 
 
 <script src="./js/logout.js"></script>

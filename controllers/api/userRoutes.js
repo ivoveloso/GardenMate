@@ -62,6 +62,7 @@ router.post('/logout', (req, res) => {
 
 router.delete('/user/:id', withAuth, async (req, res) => {
   try {
+    console.log('got a delete request');
     const userData = await User.destroy({
       where: {
         id: req.params.id

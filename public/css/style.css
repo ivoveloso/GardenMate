@@ -174,7 +174,7 @@ h3 {
   padding: 1rem 1.5em;
   border-radius: .5rem;
   background: linear-gradient(#37474f, #546e7a, #607d8b);
-  width: 400px;
+  width: 370px;
   margin-bottom: 20px;
   /* height: 600px; */
   box-shadow: box1;
@@ -290,9 +290,19 @@ h3 {
   vertical-align: middle;
 }
 
+/* .topbar-responsive .menu {} */
+
+
 .topbar-responsive .menu {
+  display: flex;
+  justify-content: end;
   background: none;
 }
+
+.topbar-responsive .menu li {
+  margin-right: 16px;
+}
+
 
 .topbar-responsive .menu li:last-of-type {
   margin-right: 0;
@@ -540,13 +550,17 @@ screen and (min-width: 40em) {
   box-shadow: 5px 10px 10px 6px rgb(205, 205, 205);
   margin-bottom: 50px;
   text-align: left;
-  width: 500px;
-  min-width: 500px;
+  width: 350px;
+  min-width: 370px;
   /* height: 200px; */
   border-style: solid;
   border-radius: 10px;
   border-color: rgb(255, 255, 255);
   border-width: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  #task-card {}
 }
 
 #task-color {
@@ -645,4 +659,6 @@ screen and (min-width: 40em) {
   color: #60e960;
 }
 
-.dropdown-item {}
+.dropdown .dropdown-item {
+  padding: 10px
+}

@@ -17,7 +17,9 @@ h3 {
   text-align: left;
 }
 
-#task-complete {}
+.dropdown-item {
+  padding: 10px;
+}
 
 #new-task {
   color: #263238;

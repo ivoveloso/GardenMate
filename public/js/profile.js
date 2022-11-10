@@ -48,10 +48,30 @@ const delButtonHandler = async (event) => {
   }
 };
 
+const selButtonHandler = async (event) => {
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
+
+    const response = await fetch(`/profile/${id}`, {
+      method: 'GET'
+    });
+
+    if (response.ok) {
+      document.location.replace(`/profile/${id}`);
+    } else {
+      alert('Failed to select project');
+    }
+  }
+};
+
 document
   .querySelector('#newEmployee')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.dropdown-menu')
+  .querySelector('.delete-menu')
   .addEventListener('click', delButtonHandler);
+
+document
+  .querySelector('.select-menu')
+  .addEventListener('click', selButtonHandler);

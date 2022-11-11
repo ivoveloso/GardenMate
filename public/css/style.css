@@ -320,6 +320,7 @@ h3 {
 @media screen and (max-width: 39.9375em) {
   .topbar-responsive .menu a {
     padding: 0.875rem 0;
+    justify-content: center;
   }
 }
 
@@ -659,6 +660,22 @@ screen and (min-width: 40em) {
   color: #60e960;
 }
 
-.dropdown .dropdown-item {
+.dropdown>.dropdown-item {
   padding: 10px
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }

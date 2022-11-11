@@ -74,38 +74,42 @@ router.get('/export', withAuth, async (req, res) => {
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile/:id', withAuth ,async (req, res) => {
+console.log(req.session)
   try {
-    console.log('request received')
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Activity, include: [{ model: Client }] }]
     });
 
-    const activityData = await Activity.findAll({ where: { user_id: req.params.id }
-    });
-
-    const activities = activityData.map((activity) =>
-      activity.get({ plain: true })
-    );
-
     const user = userData.get({ plain: true });
-    const views = userData.isAdmin ? 'admin' : 'profile';
+    if (user.isAdmin) {
+      const views = userData.isAdmin ? 'admin' : 'profile';
 
-    const employees = await User.findAll();
-    const employeeName = employees.map((individualEmployee) =>
-      individualEmployee.get({ plain: true })
-    );
-
-    res.render(views, {
-      employee: employeeName,
-      activities,
-      user: user,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+      const activityData = await Activity.findAll({ where: { user_id: req.params.id },
+        include: [{ model: Client }] });
+  
+      const activities = activityData.map((activity) =>
+        activity.get({ plain: true })
+      );
+  
+      const employees = await User.findAll();
+      const employeeName = employees.map((individualEmployee) =>
+        individualEmployee.get({ plain: true })
+      );
+  
+      res.render(views, {
+        employee: employeeName,
+        activities,
+        user: user,
+        logged_in: true
+      });
+    } else {
+      res.redirect('/profile');
+    }}
+    catch (err) {
+      res.status(500).json(err);
+    }
 });
 
 module.exports = router;

@@ -12,7 +12,7 @@ const newFormHandler = async (event) => {
   const isAdmin = admin.checked;
 
   if (password !== confirmPassword) {
-    alert('passwords are not thesame');
+    alert('passwords do not match');
     return;
   }
 

@@ -8,8 +8,6 @@ GardenMate is a simple and easy to use task management application. The applicat
 - [Usage](#usage)
 - [Credits](#credits)
 - [Licenses](#licenses)
-- [How to Contribute](#how-to-contribute)
-- [Tests](#tests)
 
 ### Installation
 

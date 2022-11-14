@@ -32,6 +32,34 @@ const newFormHandler = async (event) => {
   }
 };
 
+const newActivityHandler = async (event) => {
+  event.preventDefault();
+
+  const type = document.querySelector('#type').value.trim();
+  const description = document.querySelector('#description').value.trim();
+  const dateBooking = document.querySelector('#date-booking').value.trim();
+  const timeAllocation = document.querySelector('#time-allocation').value.trim();
+  const employeeID = document.querySelector('#employee_id').value.trim();
+  const clientID = document.querySelector('#client_id').value.trim();
+
+  alert(employeeID);
+
+  const response = await fetch('/api/projects', {
+    method: 'POST',
+    body: JSON.stringify({ type, description, dateBooking, timeAllocation, employeeID, clientID }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+
+  if (response.ok) {
+    location.reload();
+    alert('Activity successfully created');
+  } else {
+    alert('Failed to add new Activity');
+  }
+};
+
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
@@ -75,3 +103,7 @@ document
 document
   .querySelector('.select-menu')
   .addEventListener('click', selButtonHandler);
+
+document
+  .querySelector('#newActivity')
+  .addEventListener('addtask', newActivityHandler);

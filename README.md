@@ -37,11 +37,11 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
   
 
 Below are screenshots of the application:
-![GardenMate-screenshot](../GardenMate/public/assets/login.png)
+![GardenMate-screenshot](https://github.com/ivoveloso/GardenMate/blob/main/public/assets/login.png)
 
-![GardenMate-screenshot](../GardenMate/public/assets/user.png)
+![GardenMate-screenshot](https://github.com/ivoveloso/GardenMate/blob/main/public/assets/user.png)
 
-![GardenMate-screenshot](../GardenMate/public/assets/admin.png)
+![GardenMate-screenshot](https://github.com/ivoveloso/GardenMate/blob/main/public/assets/admin.png)
 
 ##### The repository for this application can be found at: 
 

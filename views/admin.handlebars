@@ -6,9 +6,10 @@
         <h3>{{current_date}}</h3>
 
 
-        <button type="submit" class="sign-in-form-button">
+        <button type="submit" class="sign-in-form-button" data-toggle="modal" data-target="#ModalAddTask">
             ADD TASK
         </button>
+
     </div>
 
 
@@ -127,6 +128,87 @@
                         <div class="form-group">
                             <div>
                                 <button type="submit" class="btn btn-success">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+        <div id="ModalAddTask" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form id="newActivity" role="form">
+                        <input type="hidden" name="_token" value="">
+                        <div class="form-group">
+                            <label class="control-label">type</label>
+                            <div>
+                                <input type="text" class="form-control input-lg" id="type" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">description</label>
+                            <div>
+                                <input type="text" class="form-control input-lg" id="description" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">date booking</label>
+                            <div>
+                                <input type="date" class="form-control input-lg" id="date-booking" name="trip-start" value="2022-07-22" min="2022-10-01" max="2022-12-31">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Duration in minutes</label>
+                            <div>
+                            <input list="duration" id="time-allocation" name="time-allocation">
+
+                            <datalist id="duration">
+                                <option value=30>
+                                <option value=60>
+                                <option value=90>
+                                <option value=120>
+                                <option value=150>
+                                <option value=180>
+                                <option value=210>
+                            </datalist>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Employee</label>
+                            <div>
+
+                            <input list="employee" id="employee_id" name="employee_id">
+
+                            <datalist id="employee">
+                                    {{#each employee}}
+                                    <option value="{{this.name}}">
+                                    {{/each}}
+                            </datalist>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Client</label>
+                            <div>
+                            <input list="clientname" id="client_id" name="client_id">
+
+                            <datalist id="clientname">
+                                <option value="Chocolate">
+                                <option value="Coconut">
+                                <option value="Mint">
+                                <option value="Strawberry">
+                                <option value="Vanilla">
+                            </datalist>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <button type="addtask" class="btn btn-success">
                                     Register
                                 </button>
                             </div>
